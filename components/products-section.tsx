@@ -9,21 +9,21 @@ import Image from 'next/image'
 export default function ProductsSection() {
   const products = [
     {
-      title: 'The Nurse Career Upgrade Playbook',
-      description: 'Practical steps to level up your nursing career with confidence, clarity, and a structured action plan.',
+      title: 'The Midwife Career Upgrade Playbook',
+      description: 'Practical steps to level up your midwifery career with confidence, clarity, and a structured action plan.',
       price: '£29',
       badge: 'Most Popular',
       image: '/guide1.png',
     },
     {
-      title: 'The Smart Nurse Survival Guide',
-      description: 'A straightforward guide to help you navigate nursing challenges, avoid burnout, and stay effective on every shift.',
+      title: 'The Smart Midwife Survival Guide',
+      description: 'A straightforward guide to navigate midwifery challenges, reduce burnout, and stay effective on every shift.',
       price: '£19',
       badge: null,
       image: '/guide2.png',
     },
     {
-      title: 'Productivity & Time Management for Nurses',
+      title: 'Productivity & Time Management for Midwives',
       description: 'Simple systems and routines to manage time better, stay organized, and get more done without extra stress.',
       price: '£24',
       badge: 'New',
@@ -42,7 +42,7 @@ export default function ProductsSection() {
             Digital Resources
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Practical, self-paced guides designed to help nurses grow faster.
+            Practical, self-paced guides designed to help midwives grow faster.
           </p>
         </div>
 

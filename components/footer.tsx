@@ -22,6 +22,7 @@ export default function Footer() {
         { label: 'About', href: '#about' },
         { label: 'Services', href: '#services' },
         { label: 'Products', href: '#products' },
+        { label: 'Store', href: '#store' },
         { label: 'Blog', href: '#blog' },
       ],
     },
@@ -29,9 +30,9 @@ export default function Footer() {
       title: 'Resources',
       links: [
         { label: 'Free Checklist', href: '#checklist' },
-        { label: 'OSCE Guide', href: '#osce' },
-        { label: 'NHS CV Template', href: '#cv' },
-        { label: 'Contact', href: '#contact' },
+        { label: 'Digital Guides', href: '#products' },
+        { label: 'Amazon Essentials', href: '#store' },
+        { label: 'Contact', href: '/contact' },
       ],
     },
     {
@@ -62,10 +63,10 @@ export default function Footer() {
               <div className="w-8 h-8 rounded-lg bg-background/10 flex items-center justify-center">
                 <span className="text-background font-bold text-sm">UN</span>
               </div>
-              <span className="font-semibold text-background">Nurse Joy</span>
+              <span className="font-semibold text-background">Midwife Joy</span>
             </div>
             <p className="text-background/70 text-sm leading-relaxed">
-              Helping international nurses achieve their dreams in the UK healthcare system.
+              Helping midwives grow confidence, strengthen skills, and build thriving careers.
             </p>
 
             {/* Newsletter Signup */}
@@ -119,7 +120,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Copyright */}
           <p className="text-sm text-background/70">
-            &copy; 2026 Nurse Joy
+            &copy; 2026 Midwife Joy
           </p>
 
           {/* Social Links */}

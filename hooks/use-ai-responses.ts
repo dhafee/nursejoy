@@ -4,89 +4,65 @@ export interface AIResponse {
   isLoading?: boolean
 }
 
-const nursingGuidanceResponses: Record<string, string> = {
-  // OSCE Related
-  osce: `The OSCE (Objective Structured Clinical Examination) is a crucial assessment for international nurses registering in the UK. It tests four key areas:
+const midwiferyGuidanceResponses: Record<string, string> = {
+  antenatal: `Antenatal care is about building safety, trust, and early detection. A simple structure that helps on busy days:
 
-1. **Communication & Professionalism** - Patient interactions, clarity, empathy
-2. **Nursing Practice & Care** - Clinical skills and patient safety
-3. **Knowledge & Understanding** - Medical knowledge and NHS protocols
-4. **Organisation & Evaluation** - Time management and self-reflection
+1. **Observe & ask**: wellbeing, movement, pain, bleeding, headaches/visual changes, swelling.
+2. **Vitals**: BP, pulse, temp (as needed) and escalate abnormal findings early.
+3. **History updates**: risks, meds, allergies, previous births, safeguarding concerns.
+4. **Focused assessment**: fundal height (if appropriate), symptoms review, education and reassurance.
+5. **Plan & documentation**: clear next steps, safety-net advice, and concise notes.
 
-Most candidates take 2-3 months to prepare. I recommend practice stations, recorded mock exams, and studying UK clinical guidelines. Would you like specific OSCE preparation strategies?`,
+Tell me the scenario (routine visit vs concerns) and I’ll tailor a quick checklist.`,
 
-  nhs: `The NHS (National Health Service) is the UK's public healthcare system. As an international nurse, here's what you need to know:
+  intrapartum: `For intrapartum support, think: **safety + communication + priorities**.
 
-- **Pay & Benefits**: Starting salary £27,055-£33,384 depending on band and experience
-- **Registration**: Must register with NMC (Nursing & Midwifery Council) - takes 6-12 weeks
-- **Working Culture**: Evidence-based practice, teamwork, patient-centered care
-- **Professional Development**: Access to training, CPD support, and career progression
-- **Work-Life Balance**: Usually 37.5 hours/week, shift patterns vary by department
+- **First 2 minutes**: identify the reason for concern, check vitals, fetal wellbeing (per local protocol), and pain.
+- **Prioritize**: what must happen now vs what can wait.
+- **Communicate clearly**: SBAR-style updates to your team.
+- **Support the birthing person**: positioning, coping strategies, informed choices.
+- **Document as you go**: short, objective notes that capture decisions and actions.
 
-NHS roles offer excellent development opportunities and a supportive healthcare system. Are you interested in specific NHS departments or specialties?`,
+What stage of labor and what’s happening right now?`,
 
-  credentials: `International nursing credentials are assessed by the NMC. Here's the registration pathway:
+  postnatal: `Postnatal care is a balance of reassurance and vigilance. Key areas to check:
 
-1. **Eligibility Check** - Ensure your qualification meets UK standards
-2. **IELTS Exam** - English language requirement (usually IELTS 7.0 minimum)
-3. **NMC Application** - Submit your qualification for assessment
-4. **OSCE Exam** - Pass the clinical examination
-5. **Registration** - Once approved, you receive your NMC PIN
+- **Bleeding & uterus**: lochia, tone, pain; escalate heavy bleeding or concerning symptoms.
+- **Vitals & wellbeing**: fever, dizziness, severe headache/visual changes, chest pain/SOB.
+- **Feeding**: latch/support, hydration, realistic plans, and follow-up.
+- **Mental health**: mood, sleep, intrusive thoughts; gentle screening and signposting.
+- **Newborn**: feeding, output, jaundice concerns, temperature, parent confidence.
 
-Total timeline: 3-6 months from start to finish. Documentation is crucial - ensure all qualifications are officially verified and translated. Would you like help with your specific credential pathway?`,
+If you share the context (home/ward, day postpartum), I’ll suggest a focused plan.`,
 
-  "job hunting": `Finding a nursing job in the UK requires strategy and persistence:
+  documentation: `A quick documentation + handover framework:
 
-1. **Timing** - Register with NMC first, then job search simultaneously
-2. **Key Sites** - NHS Jobs, Indeed, Nursing Step, Reed Health, Specialist Trust websites
-3. **CV & Cover Letter** - Highlight UK-relevant experience, use NHS terminology, explain relocation motivation
-4. **Applications** - Target hospitals/trusts with OSCE preparation support for international nurses
-5. **Interviews** - Prepare for structured interviews, discuss visa sponsorship early
-6. **Networking** - Join nursing groups, connect with other international nurses, attend nursing events
+1. **Situation**: who, gestation/postpartum day, why seen.
+2. **Assessment**: key vitals, symptoms, findings (objective).
+3. **Actions**: interventions, advice, medications, referrals.
+4. **Escalation**: who informed, time, response, plan.
+5. **Safety-net**: what to watch for + when to seek urgent help.
 
-Most international nurses secure positions within 2-4 months of registration. London and South East have higher competition but more opportunities. Which region are you targeting?`,
+Want a template you can copy into your notes?`,
 
-  relocation: `Relocating to the UK involves several key steps:
+  career: `For midwifery career growth, start here:
 
-1. **Visa & Immigration** - Most nurses use Skilled Worker visa (Healthcare Worker fast-track available)
-2. **Housing** - Research areas near your hospital, use Rightmove/Zoopla, budget £600-1200/month
-3. **Costs** - Budget £3,000-5,000 for visa, registration, travel, initial setup
-4. **Settling In** - Open a UK bank account, get National Insurance number, register with GP, join social groups
-5. **Support Services** - Many trusts offer buddy systems, accommodation assistance, cultural integration programs
+- **Define your direction**: ward/community, high-risk, education, leadership, research.
+- **Strengths inventory**: 3 clinical strengths + 3 soft skills + 2 wins you can prove.
+- **Your story**: a clear 30-second intro (who you are, what you do, what you’re growing).
+- **Interview prep**: practice scenario questions, reflection, escalation, and team communication.
 
-The first 3-6 months involve adjustment, but most international nurses find UK nursing rewarding. Do you have questions about specific relocation aspects?`,
+Tell me your goal (new role, promotion, confidence, brand) and I’ll map next steps.`,
 
-  cost: `Here's a realistic cost breakdown for UK nurse relocation:
+  default: `Hi! I’m Midwife Joy. I’m here to help you with:
 
-**One-time Costs:**
-- Visa (Healthcare Worker) £719
-- NMC Registration £121
-- IELTS Exam £214
-- Initial Travel & Setup £1,500-2,000
+- **Antenatal care**: assessments, education, communication
+- **Labor support**: prioritization, calm decision-making
+- **Postnatal care**: support, red flags, escalation
+- **Documentation**: notes, handover, organization
+- **Career growth**: confidence, interviews, personal brand
 
-**Monthly Living Costs:**
-- Rent (shared accommodation) £600-900
-- Council Tax £100-150
-- Utilities £80-120
-- Food & Groceries £300-400
-- Transport £50-100
-- Miscellaneous £200-300
-
-**Total Setup:** £2,500-3,500
-**Monthly Budget:** £1,330-2,070
-
-Most nurses break even within 6 months of starting work. Early career support and nursing bursaries may reduce costs. What's your approximate budget for relocation?`,
-
-  "default": `Hello! I'm nurse Joy, an NHS-registered nurse and relocation coach. I'm here to help you with:
-
-- **OSCE Preparation** - Clinical exam guidance and strategies
-- **NHS Information** - Understanding the UK healthcare system
-- **Credential Registration** - NMC pathway and requirements
-- **Job Hunting** - Finding and securing NHS positions
-- **Relocation Planning** - Moving to the UK with practical advice
-- **Cost Planning** - Budget breakdown and financial planning
-
-What would you like to know about your nursing journey to the UK? Feel free to ask about any of these topics or your specific situation!`
+What would you like help with today?`
 }
 
 export function useAIResponses() {
@@ -94,26 +70,23 @@ export function useAIResponses() {
     const lowerInput = userInput.toLowerCase()
 
     // Match keywords to response categories
-    if (lowerInput.includes('osce') || lowerInput.includes('exam') || lowerInput.includes('clinical')) {
-      return nursingGuidanceResponses.osce
+    if (lowerInput.includes('antenatal') || lowerInput.includes('pregnan') || lowerInput.includes('booking')) {
+      return midwiferyGuidanceResponses.antenatal
     }
-    if (lowerInput.includes('nhs') || lowerInput.includes('hospital') || lowerInput.includes('salary')) {
-      return nursingGuidanceResponses.nhs
+    if (lowerInput.includes('labor') || lowerInput.includes('labour') || lowerInput.includes('intrapart') || lowerInput.includes('delivery') || lowerInput.includes('birth')) {
+      return midwiferyGuidanceResponses.intrapartum
     }
-    if (lowerInput.includes('credential') || lowerInput.includes('registration') || lowerInput.includes('nmf') || lowerInput.includes('registered')) {
-      return nursingGuidanceResponses.credentials
+    if (lowerInput.includes('postnatal') || lowerInput.includes('postpartum') || lowerInput.includes('after birth') || lowerInput.includes('newborn') || lowerInput.includes('breastfeed')) {
+      return midwiferyGuidanceResponses.postnatal
     }
-    if (lowerInput.includes('job') || lowerInput.includes('position') || lowerInput.includes('hire') || lowerInput.includes('employer')) {
-      return nursingGuidanceResponses['job hunting']
+    if (lowerInput.includes('document') || lowerInput.includes('handover') || lowerInput.includes('notes') || lowerInput.includes('chart')) {
+      return midwiferyGuidanceResponses.documentation
     }
-    if (lowerInput.includes('reloc') || lowerInput.includes('move') || lowerInput.includes('uk') || lowerInput.includes('housing')) {
-      return nursingGuidanceResponses.relocation
-    }
-    if (lowerInput.includes('cost') || lowerInput.includes('price') || lowerInput.includes('budget') || lowerInput.includes('money')) {
-      return nursingGuidanceResponses.cost
+    if (lowerInput.includes('career') || lowerInput.includes('interview') || lowerInput.includes('cv') || lowerInput.includes('resume') || lowerInput.includes('brand')) {
+      return midwiferyGuidanceResponses.career
     }
 
-    return nursingGuidanceResponses.default
+    return midwiferyGuidanceResponses.default
   }
 
   return { getResponse }

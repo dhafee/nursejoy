@@ -9,8 +9,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'UK Nurse Relocation Coach - NHS Career Guidance',
-  description: 'Helping international nurses relocate to the UK, pass licensing exams, and secure NHS positions. Professional coaching from a UK registered nurse.',
+  title: 'Midwifery Mentor - Career & Practice Support',
+  description: 'Helping midwives build confidence, strengthen skills, and grow fulfilling careers through coaching, tools, and practical guidance.',
   generator: 'v0.app',
   icons: {
     icon: [

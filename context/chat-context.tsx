@@ -1,7 +1,6 @@
 'use client'
 
 import React, { createContext, useContext, useState, useCallback } from 'react'
-import { useAIResponses } from '@/hooks/use-ai-responses'
 
 export interface ChatMessage {
   id: string
@@ -25,14 +24,13 @@ export function ChatProvider({ children }: { children: React.ReactNode }) {
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       id: '1',
-      text: `Hello! I'm nurse Joy, your NHS Nursing Guide. I'm here to help you with OSCE preparation, NHS information, credentials, job hunting, relocation planning, and cost guidance. What can I help you with today?`,
+      text: `Hello! I'm Midwife Joy. I'm here to help you with antenatal care, labor support, postnatal care, documentation, time management, and career growth. What can I help you with today?`,
       sender: 'assistant',
       timestamp: new Date(),
     },
   ])
   const [isOpen, setIsOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
-  const { getResponse } = useAIResponses()
 
   const addMessage = useCallback((text: string) => {
     if (!text.trim()) return
@@ -48,25 +46,48 @@ export function ChatProvider({ children }: { children: React.ReactNode }) {
     setMessages((prev) => [...prev, userMessage])
     setIsLoading(true)
 
-    // Simulate AI response delay
-    setTimeout(() => {
-      const aiResponse = getResponse(text)
-      const assistantMessage: ChatMessage = {
-        id: (Date.now() + 1).toString(),
-        text: aiResponse,
-        sender: 'assistant',
-        timestamp: new Date(),
+    ;(async () => {
+      try {
+        const res = await fetch('/api/gemini', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            messages: [...messages, userMessage].map((m) => ({
+              role: m.sender,
+              content: m.text,
+            })),
+          }),
+        })
+
+        const data = (await res.json()) as { text?: string; error?: string }
+        const reply = res.ok ? (data.text ?? '') : (data.error ?? 'Something went wrong.')
+
+        const assistantMessage: ChatMessage = {
+          id: (Date.now() + 1).toString(),
+          text: reply || 'I could not generate a response right now. Please try again.',
+          sender: 'assistant',
+          timestamp: new Date(),
+        }
+        setMessages((prev) => [...prev, assistantMessage])
+      } catch {
+        const assistantMessage: ChatMessage = {
+          id: (Date.now() + 1).toString(),
+          text: 'I could not reach the assistant right now. Please try again.',
+          sender: 'assistant',
+          timestamp: new Date(),
+        }
+        setMessages((prev) => [...prev, assistantMessage])
+      } finally {
+        setIsLoading(false)
       }
-      setMessages((prev) => [...prev, assistantMessage])
-      setIsLoading(false)
-    }, 500)
-  }, [getResponse])
+    })()
+  }, [messages])
 
   const clearMessages = useCallback(() => {
     setMessages([
       {
         id: '1',
-        text: `Hello! I'm nurse Joy, your NHS Nursing Guide. I'm here to help you with OSCE preparation, NHS information, credentials, job hunting, relocation planning, and cost guidance. What can I help you with today?`,
+        text: `Hello! I'm Midwife Joy. I'm here to help you with antenatal care, labor support, postnatal care, documentation, time management, and career growth. What can I help you with today?`,
         sender: 'assistant',
         timestamp: new Date(),
       },

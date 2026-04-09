@@ -8,40 +8,40 @@ export default function AIAssistantSection() {
 
   const quickTopics = [
     {
-      title: 'OSCE Exam',
-      description: 'Clinical examination guidance',
+      title: 'Antenatal Care',
+      description: 'Assessments & communication',
       emoji: '📋',
-      query: 'Tell me about OSCE preparation',
+      query: 'Share practical tips for antenatal assessment and patient communication.',
     },
     {
-      title: 'NHS Career',
-      description: 'UK healthcare system & salary',
+      title: 'Labor Support',
+      description: 'Intrapartum priorities',
       emoji: '🏥',
-      query: 'What should I know about NHS jobs?',
+      query: 'How do I prioritize and stay calm during active labor support on shift?',
     },
     {
-      title: 'Registration',
-      description: 'NMC credential pathway',
+      title: 'Postnatal Care',
+      description: 'Support & red flags',
       emoji: '✅',
-      query: 'How do I register my credentials?',
+      query: 'What are key postnatal red flags to watch for and how should I respond?',
     },
     {
-      title: 'Job Hunting',
-      description: 'Find & secure nursing positions',
+      title: 'Career Growth',
+      description: 'Interviews & confidence',
       emoji: '🔍',
-      query: 'How do I find nursing jobs in the UK?',
+      query: 'Help me prepare for a midwifery interview and talk about my strengths confidently.',
     },
     {
-      title: 'Relocation',
-      description: 'Moving to the UK guide',
+      title: 'Documentation',
+      description: 'Notes & handover',
       emoji: '🚀',
-      query: 'What do I need to know about relocating to the UK?',
+      query: 'Give me a simple checklist for midwifery documentation and handover.',
     },
     {
-      title: 'Cost Planning',
-      description: 'Budget & financial planning',
+      title: 'Time Management',
+      description: 'Shift organization',
       emoji: '💰',
-      query: 'What are the costs of relocating as a nurse?',
+      query: 'How can I manage time better on shift without feeling overwhelmed?',
     },
   ]
 
@@ -60,10 +60,10 @@ export default function AIAssistantSection() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-            Meet Nurse Joy
+            Meet Midwife Joy
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-            Your AI-powered NHS nursing guide available 24/7. Get instant answers about OSCE, registration, job hunting, and UK relocation.
+            Your AI-powered midwifery guide available 24/7. Get instant answers about antenatal care, labor support, postnatal care, documentation, and career growth.
           </p>
         </div>
 
@@ -78,35 +78,35 @@ export default function AIAssistantSection() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-foreground">Joy Gabriel</h3>
-                  <p className="text-sm text-accent font-medium">NHS Registered Nurse & AI Guide</p>
+                  <p className="text-sm text-accent font-medium">Midwife & AI Guide</p>
                 </div>
               </div>
 
               <div className="space-y-4">
                 <p className="text-foreground">
-                  Joy is an intelligent nursing assistant designed to help international nurses navigate their UK career journey. Based on real NHS experience, Joy provides guidance on:
+                  Joy is an intelligent midwifery assistant designed to help midwives strengthen skills, build confidence, and grow their careers. Joy provides guidance on:
                 </p>
 
                 <ul className="space-y-2">
                   <li className="flex items-start gap-3">
                     <span className="text-accent mt-1 flex-shrink-0">✓</span>
-                    <span className="text-foreground">OSCE exam preparation and clinical skills</span>
+                    <span className="text-foreground">Antenatal assessments and patient communication</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-accent mt-1 flex-shrink-0">✓</span>
-                    <span className="text-foreground">NMC registration pathway and credentials</span>
+                    <span className="text-foreground">Labor support priorities and shift decision-making</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-accent mt-1 flex-shrink-0">✓</span>
-                    <span className="text-foreground">NHS system, salary, and career development</span>
+                    <span className="text-foreground">Postnatal support, red flags, and escalation</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-accent mt-1 flex-shrink-0">✓</span>
-                    <span className="text-foreground">Job hunting strategies and applications</span>
+                    <span className="text-foreground">Documentation workflows and handover prompts</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-accent mt-1 flex-shrink-0">✓</span>
-                    <span className="text-foreground">Relocation planning and cost guidance</span>
+                    <span className="text-foreground">Career mentorship, confidence, and interviews</span>
                   </li>
                 </ul>
 
@@ -158,9 +158,9 @@ export default function AIAssistantSection() {
 
         {/* CTA */}
         <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-8 text-center border border-border">
-          <h3 className="text-xl font-bold text-foreground mb-3">Ready to Transform Your Nursing Career?</h3>
+          <h3 className="text-xl font-bold text-foreground mb-3">Ready to Elevate Your Midwifery Career?</h3>
           <p className="text-foreground mb-6 max-w-2xl mx-auto">
-            Start with Joy's instant guidance, then book a personalized coaching session with me for comprehensive support.
+            Start with Joy’s instant guidance, then book a personalized coaching session for deeper support.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Button

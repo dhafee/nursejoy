@@ -54,10 +54,10 @@ export default function AmazonStoreSection() {
             Amazon Essentials
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Nurse Store Picks
+            Midwife Essentials Store
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Recommended nursing essentials to support your daily work and training.
+            Recommended essentials to support your daily midwifery practice and training.
           </p>
         </div>
 

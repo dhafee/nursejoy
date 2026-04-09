@@ -8,37 +8,37 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       name: 'Ade Okafor',
-      role: 'RN, NHS Trust',
+      role: 'Midwife',
       location: 'London',
-      content: 'Working with her was a game-changer. She helped me pass OSCE on my first try and land a role at a top NHS hospital. Her insights are invaluable.',
+      content: 'Working with her was a game-changer. I became more confident on shift and learned simple systems that made documentation and prioritization so much easier.',
       initials: 'AO',
     },
     {
       name: 'Chioma Adeyemi',
-      role: 'RN, NHS Trust',
+      role: 'Midwife',
       location: 'Manchester',
-      content: 'The interview coaching session transformed my confidence. I went from nervous and unprepared to walking into interviews knowing exactly what to expect.',
+      content: 'The coaching sessions transformed my confidence. I went from overwhelmed to walking into interviews knowing how to communicate my strengths clearly.',
       initials: 'CA',
     },
     {
       name: 'Blessing Okoro',
-      role: 'RN, NHS Trust',
+      role: 'Midwife',
       location: 'Birmingham',
-      content: 'Her relocation guidance saved me months of confusion and thousands of pounds. Every step was clearly mapped out. Highly recommended!',
+      content: 'Her guidance helped me feel more grounded in clinical decision-making. I’m calmer during busy moments and more confident escalating when needed.',
       initials: 'BO',
     },
     {
       name: 'Zainab Hassan',
-      role: 'RN, NHS Trust',
+      role: 'Midwife',
       location: 'Leeds',
-      content: 'The CV review completely transformed how I presented my experience. I got interviews within weeks of updating it with her feedback.',
+      content: 'The CV and personal brand review completely transformed how I presented my experience. I started getting interviews within weeks.',
       initials: 'ZH',
     },
     {
       name: 'Tunde Adeleke',
-      role: 'RN, NHS Trust',
+      role: 'Student Midwife',
       location: 'Bristol',
-      content: 'As someone from Nigeria, I was skeptical about making the move. Her personal story and practical guidance gave me the confidence to proceed.',
+      content: 'As a student, I needed practical structure. The checklists and mentorship gave me clarity on what to focus on and how to grow faster.',
       initials: 'TA',
     },
   ]
@@ -51,7 +51,7 @@ export default function TestimonialsSection() {
             Success Stories
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Hear from nurses who've successfully relocated and thrived in the NHS
+            Hear from midwives who’ve grown in confidence and practice
           </p>
         </div>
 

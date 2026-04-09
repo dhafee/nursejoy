@@ -12,6 +12,7 @@ export default function Navigation() {
     { label: 'About', href: '#about' },
     { label: 'Services', href: '#services' },
     { label: 'Products', href: '#products' },
+    { label: 'Chat with joy', href: '/chat' },
     { label: 'Blog', href: '#blog' },
   ]
 
@@ -24,26 +25,36 @@ export default function Navigation() {
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm">NJ</span>
             </div>
-            <span className="font-semibold text-foreground hidden sm:inline">Nurse joy</span>
+            <span className="font-semibold text-foreground hidden sm:inline">Midwife Joy</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link.label}
-              </a>
+              link.href.startsWith('#') ? (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </div>
 
           {/* Desktop CTA */}
           <div className="hidden md:flex gap-2">
-            <Button variant="outline" size="sm" className="rounded-full px-5">
-              Contact
+            <Button asChild variant="outline" size="sm" className="rounded-full px-5">
+              <Link href="/contact">Contact</Link>
             </Button>
           </div>
 
@@ -60,16 +71,26 @@ export default function Navigation() {
         {isOpen && (
           <div className="md:hidden mb-4 p-4 rounded-xl border border-border/70 bg-background/95 shadow-sm space-y-2">
             {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="block text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-colors px-3 py-2"
-              >
-                {link.label}
-              </a>
+              link.href.startsWith('#') ? (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="block text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-colors px-3 py-2"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="block text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-colors px-3 py-2"
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
-            <Button className="w-full rounded-full" size="sm">
-              Contact
+            <Button asChild className="w-full rounded-full" size="sm">
+              <Link href="/contact">Contact</Link>
             </Button>
           </div>
         )}

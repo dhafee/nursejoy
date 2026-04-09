@@ -7,18 +7,18 @@ export default function TrustSection() {
   const credentials = [
     {
       icon: Award,
-      title: 'UK Registered Nurse',
-      description: 'NMC Registration #12345678',
+      title: 'Registered Midwife',
+      description: 'Evidence-based, compassionate care',
     },
     {
       icon: Users,
-      title: 'NHS Experience',
-      description: '5+ years working with NHS trusts',
+      title: 'Clinical Practice',
+      description: 'Antenatal • Intrapartum • Postnatal',
     },
     {
       icon: CheckCircle,
       title: 'Verified Coach',
-      description: 'Successfully guided 150+ nurses',
+      description: 'Successfully supported 150+ midwives',
     },
   ]
 
@@ -27,7 +27,7 @@ export default function TrustSection() {
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Trusted by International Nurses
+            Trusted by Midwives
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             My credentials and experience speak for themselves

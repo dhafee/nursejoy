@@ -26,25 +26,25 @@ export default function AboutSection() {
           {/* Content */}
           <div className="space-y-8">
             <div id="journey" className="space-y-4">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground">My Journey: Nigeria to UK Nursing</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground">My Journey in Midwifery</h3>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
-                  I graduated as a nurse in Nigeria in 2015, bringing 6 years of clinical experience. In 2019, I made the brave decision to relocate to the UK to advance my career. What I thought would be straightforward became a challenging journey filled with unexpected hurdles.
+                  Midwifery taught me that presence, skill, and confidence matter—especially in high‑pressure moments. Over time, I learned how to stay grounded, communicate clearly, and lead with calm while supporting women and families through pregnancy, birth, and postpartum care.
                 </p>
                 <p>
-                  The IELTS exam, the NMC registration process, OSCE preparation, and the intense job search left me overwhelmed. I faced rejection letters, struggled with interview anxiety, and questioned if the move was worth it. But I persevered, and in 2020, I became a UK Registered Nurse.
+                  I also learned the hard way that burnout can sneak in when you’re always giving. Building simple systems—how I plan my shifts, document efficiently, and protect my energy—helped me thrive and become more effective in my practice.
                 </p>
               </div>
             </div>
 
             <div id="why-help" className="space-y-4 pt-4 border-t border-secondary">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground">Why I Help Other Nurses</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground">Why I Help Other Midwives</h3>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
-                  Watching countless nurses struggle through the same challenges I faced motivated me to help. I realized that the knowledge I gained—the exam strategies, the NHS recruitment insights, the relocation logistics—could save others months of frustration and thousands of pounds.
+                  I’ve seen so many midwives carry the weight of responsibility alone—questioning themselves, overworking, and feeling stuck. I believe you deserve support that’s practical, compassionate, and built for real life.
                 </p>
                 <p>
-                  Today, I dedicate my time to coaching international nurses through every step of their relocation journey. My goal is simple: to make your path to UK nursing smoother and faster than mine was.
+                  Today, I mentor midwives with tools, coaching, and step‑by‑step guidance—so you can grow your confidence, strengthen your skills, and build a career you’re proud of.
                 </p>
               </div>
             </div>
@@ -53,7 +53,7 @@ export default function AboutSection() {
               <h3 className="text-2xl md:text-3xl font-bold text-foreground">My Approach</h3>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
-                  I don't believe in one-size-fits-all solutions. Every nurse's situation is unique. That's why I provide personalized coaching tailored to your specific needs—whether you're just starting the relocation process or preparing for interviews.
+                  I don’t believe in one-size-fits-all solutions. Every midwife’s situation is unique. That’s why my support is personalized—whether you’re building confidence on shift, preparing for interviews, or creating a clear plan for your next career move.
                 </p>
               </div>
             </div>

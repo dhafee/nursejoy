@@ -14,20 +14,20 @@ export default function HeroSection() {
           <div className="space-y-6 md:space-y-8 order-2 md:order-1">
             <div className="space-y-4">
               <Badge className="bg-primary/10 text-primary hover:bg-primary/10">
-                UK Nurse Relocation Mentorship
+                Midwifery Mentorship
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance">
-                Helping Nurses Build Confidence, Clarity, and Career Growth
+                Helping Midwives Build Confidence, Clarity, and Career Growth
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                Get practical guidance, personalized coaching, and proven tools to grow your nursing career and thrive in your professional journey.
+                Get practical guidance, personalized coaching, and proven tools to grow in midwifery and thrive in your professional journey.
               </p>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 pt-4">
               <Button size="lg" className="group rounded-full px-7">
-                Get Free Relocation Checklist
+                Get Free Midwifery Checklist
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
@@ -42,7 +42,7 @@ export default function HeroSection() {
             {/* Trust Badge */}
             <div className="pt-4 flex items-center gap-2 text-sm text-muted-foreground">
               <div className="w-2 h-2 rounded-full bg-accent"></div>
-              <span>NSS registered nurse</span>
+              <span>Midwife • Educator • Mentor</span>
             </div>
           </div>
 
@@ -52,7 +52,7 @@ export default function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"></div>
               <Image
                 src="/avatar.png"
-                alt="Professional nurse portrait"
+                alt="Professional midwife portrait"
                 fill
                 className="object-contain object-center"
                 priority

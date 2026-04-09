@@ -8,20 +8,20 @@ export default function ServicesSection() {
   const services = [
     {
       icon: FileText,
-      title: 'CV & NHS Application Review',
-      description: 'Get your CV and NHS application reviewed by someone who knows exactly what NHS recruiters are looking for.',
+      title: 'Midwifery CV & Personal Brand Review',
+      description: 'Refine your CV, bio, and positioning so you’re clearly seen for your strengths in midwifery.',
       price: '£79',
     },
     {
       icon: MessageSquare,
-      title: 'Interview Coaching',
-      description: 'Master NHS interview techniques, behavioral questions, and showcase your strengths with confidence.',
+      title: 'Career Mentorship & Confidence Coaching',
+      description: 'Get structured support to grow confidence, set goals, and make bold next steps in your midwifery journey.',
       price: '£99',
     },
     {
       icon: MapPin,
-      title: 'Relocation Guidance',
-      description: 'Complete guidance from visa planning to finding accommodation and navigating UK healthcare systems.',
+      title: 'Clinical Skills & Practice Support',
+      description: 'Practical guidance for antenatal, intrapartum, and postnatal care—plus tools to stay organized on shift.',
       price: '£129',
     },
   ]
@@ -34,7 +34,7 @@ export default function ServicesSection() {
             Coaching Services
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Personalized 1-on-1 coaching to accelerate your UK nursing career
+            Personalized 1-on-1 coaching to elevate your midwifery career and practice
           </p>
         </div>
 
